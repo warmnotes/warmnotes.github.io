@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Warm Notes — A heartfelt email, written for someone you love</title>
+<meta name="description" content="Warm Notes writes and delivers a heartfelt email for someone you love. One note $2.99, or a month of notes $9.99. Any occasion, any day you choose.">
+<style>
+:root{--ink:#3b2f2a;--muted:#5c4a42;--soft:#8a7a72;--line:#e8dcd3;--paper:#fffdf9;--bg:#faf3ec;--blush:#f4e4d8;--terra:#c0563b;--terra-d:#9e3f28;--gold:#b57a4a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:var(--terra)}img{max-width:100%}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font:600 15px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);text-decoration:none}
+nav .buy{font:600 13px/1 ui-sans-serif,system-ui,sans-serif;color:#fff;background:var(--terra);padding:9px 14px;border-radius:999px;text-decoration:none}
+.hero{padding:28px 0 12px;text-align:center}
+.tag{font:12px/1.3 ui-sans-serif,system-ui,sans-serif;color:var(--gold);text-transform:uppercase;letter-spacing:.14em;margin:0 0 14px}
+h1{font-size:clamp(30px,6.5vw,44px);line-height:1.18;font-weight:normal;margin:0 0 16px}
+.sub{font-size:18px;line-height:1.55;color:var(--muted);margin:0 auto 26px;max-width:34em}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-block;text-align:center;text-decoration:none;border:0;cursor:pointer;border-radius:12px;padding:15px 22px;font:600 16px/1.2 ui-sans-serif,system-ui,sans-serif;width:100%}
+.btn-fill{background:var(--terra);color:#fff;box-shadow:0 6px 18px rgba(192,86,59,.25)}
+.btn-fill:hover{background:var(--terra-d)}
+.btn-ghost{background:transparent;color:var(--terra);border:1.5px solid #e3b8ab}
+.btn-ghost:hover{background:#fff}
+.note{background:var(--paper);border-radius:18px;padding:26px 24px 22px;margin:32px auto;max-width:520px;box-shadow:0 10px 32px rgba(59,47,42,.07);position:relative}
+.note:before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;background:var(--terra);border-radius:4px}
+.note p{font-style:italic;font-size:17px;line-height:1.7;margin:0 0 14px}
+.note .from{font:13px ui-sans-serif,system-ui,sans-serif;font-style:normal;color:var(--soft);margin:0}
+h2{font-size:26px;font-weight:normal;text-align:center;margin:0 0 8px}
+.lead{text-align:center;color:var(--muted);margin:0 0 28px}
+section{padding:36px 0}
+.steps{display:grid;gap:14px}
+.step{background:var(--paper);border-radius:14px;padding:18px 18px 18px 64px;position:relative;box-shadow:0 2px 10px rgba(59,47,42,.05)}
+.step b{display:block;font:600 15px ui-sans-serif,system-ui,sans-serif;margin-bottom:4px}
+.step span{color:var(--muted);font-size:15px}
+.num{position:absolute;left:16px;top:18px;width:34px;height:34px;border-radius:50%;background:var(--blush);color:var(--terra);display:flex;align-items:center;justify-content:center;font:600 14px ui-sans-serif,system-ui,sans-serif}
+.plans{display:grid;gap:16px}
+@media(min-width:620px){.plans{grid-template-columns:1fr 1fr;align-items:stretch}.cta-row .btn{width:auto;min-width:220px}}
+.plan{background:var(--paper);border-radius:18px;padding:24px 22px 22px;box-shadow:0 4px 18px rgba(59,47,42,.06);display:flex;flex-direction:column;border:1px solid transparent;position:relative}
+.plan.pop{border-color:#e3b8ab;box-shadow:0 8px 28px rgba(192,86,59,.12)}
+.badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--terra);color:#fff;font:600 11px/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;white-space:nowrap}
+.plan h3{margin:8px 0 4px;font-size:22px;font-weight:normal;text-align:center}
+.price{text-align:center;font-size:36px;margin:0 0 4px;letter-spacing:-.03em}
+.price small{font-size:16px;color:var(--soft)}
+.plan p{text-align:center;color:var(--muted);font-size:15px;margin:0 0 18px;flex:1}
+.trust{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.trust li{background:var(--paper);border-radius:12px;padding:14px 16px 14px 42px;position:relative;font:15px/1.45 ui-sans-serif,system-ui,sans-serif;color:var(--muted)}
+.trust li:before{content:"♥";position:absolute;left:16px;top:14px;color:var(--terra);font-size:13px}
+.card{background:var(--paper);border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(59,47,42,.06)}
+label{display:block;font:14px ui-sans-serif,system-ui,sans-serif;margin:12px 0 5px}
+input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:ui-sans-serif,system-ui,sans-serif;background:#fff;color:var(--ink)}
+.consent{font:12px ui-sans-serif,system-ui,sans-serif;color:var(--soft);margin:10px 0 0;text-align:center}
+#out{display:none;margin-top:16px;font-style:italic;line-height:1.7;border-left:3px solid var(--terra);padding:4px 0 4px 14px}
+.faq details{background:var(--paper);border-radius:12px;padding:14px 16px;margin:0 0 8px}
+.faq summary{cursor:pointer;font:600 15px ui-sans-serif,system-ui,sans-serif}
+.faq p{margin:8px 0 0;color:var(--muted);font-size:15px}
+footer{text-align:center;padding:28px 20px 48px;font:13px/1.6 ui-sans-serif,system-ui,sans-serif;color:var(--soft)}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="logo" href="#">Warm Notes</a>
+  <a class="buy" href="#pricing">Buy a note</a>
+</nav>
+
+<header class="hero">
+  <p class="tag">A gift you can send today</p>
+  <h1>Some words are too big to say out loud. Let us help you write them.</h1>
+  <p class="sub">Warm Notes writes a heartfelt email for someone you love — your mom, your partner, your grandchildren, a loved one, or someone you miss — and delivers it on the day you choose.</p>
+  <div class="cta-row">
+    <a class="btn btn-fill" href="#pricing">Send a Warm Note</a>
+    <a class="btn btn-ghost" href="#try">Try a free sample</a>
+  </div>
+</header>
+
+<figure class="note" aria-label="Sample Warm Note">
+  <p>“Amina, I don’t say it enough, but the way you always make me laugh is one of the things that makes my life warmer. Some days are long, and knowing you’re there makes them lighter. Thank you for being exactly who you are. I’m grateful for you, today and always.”</p>
+  <p class="from">From someone who cares about you · a sample Warm Note</p>
+</figure>
+
+<section>
+  <h2>How it works</h2>
+  <p class="lead">Three short steps. No wrapping, no shipping, never late.</p>
+  <div class="steps">
+    <div class="step"><span class="num">1</span><b>Pick who &amp; the occasion</b><span>Mom, a partner, grandchildren, a loved one, someone you miss — Christmas, a birthday, or just because.</span></div>
+    <div class="step"><span class="num">2</span><b>Add a few details</b><span>Their name, how you know them, and a couple of things you love about them. We keep the wording positive and kind.</span></div>
+    <div class="step"><span class="num">3</span><b>We write &amp; deliver on your date</b><span>A warm email arrives in their inbox, signed from you — or anonymously as “Someone who cares about you.”</span></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Choose a gift</h2>
+  <p class="lead">Easy to buy. We’ll ask for their details at checkout.</p>
+  <div class="plans">
+    <article class="plan">
+      <h3>One Warm Note</h3>
+      <p class="price">$2.99</p>
+      <p>One heartfelt email, written for them and delivered on any day you choose. Perfect for a birthday, Christmas, or a day they need to hear it.</p>
+      <a class="btn btn-fill" href="https://dusterdash.gumroad.com/l/ablohk?wanted=true">Buy One Warm Note · $2.99</a>
+    </article>
+    <article class="plan pop">
+      <div class="badge">Most popular</div>
+      <h3>A month of notes</h3>
+      <p class="price">$9.99 <small>/ month, cancel anytime</small></p>
+      <p>4 notes a month. We’ll write and send a new note each week — a small lift that lasts longer than a single day.</p>
+      <a class="btn btn-fill" href="https://dusterdash.gumroad.com/l/incvgt?wanted=true">Buy a month of notes · $9.99 / month</a>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Sent with care</h2>
+  <p class="lead">A gift should feel safe for the person who receives it.</p>
+  <ul class="trust">
+    <li>We write the note. Content stays positive — no free-text that could be used to hurt someone.</li>
+    <li>Every email is signed from you, or anonymously as “Someone who cares about you.”</li>
+    <li>Every email includes visible unsubscribe and report links.</li>
+    <li>We only email people a paying buyer names. Never scraped or purchased lists. At most one email per recipient, per buyer, per day.</li>
+  </ul>
+</section>
+
+<section id="try">
+  <h2>Try a free sample</h2>
+  <p class="lead">See the tone in a few seconds. When you’re ready, we’ll write the real one and send it for you.</p>
+  <div class="card">
+    <label for="n">Their first name</label>
+    <input id="n" placeholder="Amina" autocomplete="off">
+    <label for="r">Your relationship to them</label>
+    <select id="r">
+      <option>Mom</option><option>Dad</option><option>Partner</option><option>Friend</option>
+      <option>Sister</option><option>Brother</option><option>Grandparent</option><option>Grandchild</option>
+      <option>Loved one</option><option>Someone I miss</option>
+    </select>
+    <label for="d">One thing you love about them</label>
+    <input id="d" maxlength="80" placeholder="the way you always make me laugh">
+    <button class="btn btn-fill" type="button" onclick="go()">Write my free note</button>
+    <p class="consent">This sample stays on your screen. Nothing is sent or saved until you buy.</p>
+    <div id="out" role="status"></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Questions</h2>
+  <p class="lead">Short answers before you buy.</p>
+  <details open>
+    <summary>What occasions can I send a note for?</summary>
+    <p>Any day that matters: Christmas, a birthday, a thank-you, or just because. It works for grandchildren, loved ones, and someone you miss, not only family holidays.</p>
+  </details>
+  <details>
+    <summary>Who is the email from?</summary>
+    <p>From you, by name — or, if you prefer to stay anonymous, signed “Someone who cares about you.”</p>
+  </details>
+  <details>
+    <summary>Can the person unsubscribe?</summary>
+    <p>Yes. Every Warm Note includes clear unsubscribe and report links. We also cap sending at one email per recipient, per buyer, per day.</p>
+  </details>
+  <details>
+    <summary>Do you email anyone else?</summary>
+    <p>No. We only email people a paying buyer names. We don’t use scraped or purchased lists.</p>
+  </details>
+</section>
+
+<footer>
+  Warm Notes · a small, kind email, written for someone you love.<br>
+  Questions? <a href="mailto:warmnotes.team@gmail.com">warmnotes.team@gmail.com</a>
+</footer>
+</div>
+<script>
+function go(){
+  var n=document.getElementById('n').value.trim()||'Amina';
+  var d=document.getElementById('d').value.trim()||'the way you always make me laugh';
+  var o=document.getElementById('out');
+  o.style.display='block';
+  o.textContent='"'+n+', I don’t say it enough, but '+d+' is one of the things that makes my life warmer. Some days are long, and knowing you’re there makes them lighter. Thank you for being exactly who you are. I’m grateful for you, today and always."';
+  o.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>
